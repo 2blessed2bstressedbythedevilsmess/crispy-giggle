@@ -4,27 +4,43 @@
 <head>
   
   <title>angular tutorial</title>
+  
    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+   
    <script src="scrippys.js"></script>
+   
 </head>
 
 <body ng-app="myApp">
+  
 <div ng-controller="names1Ctrl">
 
-<p>Looping with objects:</p>
+<p>Arrange names by state:</p>
+
 <ul>
+  
   <li ng-repeat="x in names | orderBy:'state'">
+    
     {{ x.name + ', ' + x.state }}
+    
   </li>
+  
 </ul>
 
 </div>
+
+<hr>
+
 <div ng-controller="namesCtrl">
 
 <ul>
+  
   <li ng-repeat="x in names | filter : 'i'">
+    
     {{ x }}
+    
   </li>
+  
 </ul>
 
 
